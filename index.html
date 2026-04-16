@@ -268,13 +268,13 @@
         <select class="form-select" id="pred-race">
           <option value="">— Select Race —</option>
           <option>R01 · Australian GP</option><option>R02 · Chinese GP</option><option>R03 · Japanese GP</option>
-          <option>R04 · Bahrain GP</option><option>R05 · Saudi Arabian GP</option><option>R06 · Miami GP</option>
-          <option>R07 · Emilia Romagna GP</option><option>R08 · Monaco GP</option><option>R09 · Canadian GP</option>
-          <option>R10 · Spanish GP</option><option>R11 · Austrian GP</option><option>R12 · British GP</option>
-          <option>R13 · Hungarian GP</option><option>R14 · Belgian GP</option><option>R15 · Dutch GP</option>
-          <option>R16 · Italian GP</option><option>R17 · Azerbaijan GP</option><option>R18 · Singapore GP</option>
-          <option>R19 · United States GP</option><option selected>R20 · Mexico GP</option>
-          <option>R21 · São Paulo GP</option><option>R22 · Las Vegas GP</option><option>R23 · Qatar GP</option><option>R24 · Abu Dhabi GP</option>
+          <option selected>R04 · Miami GP</option><option>R05 · Canadian GP</option><option>R06 · Monaco GP</option>
+          <option>R07 · Spanish GP</option><option>R08 · Austrian GP</option><option>R09 · British GP</option>
+          <option>R10 · Belgian GP</option><option>R11 · Hungarian GP</option><option>R12 · Dutch GP</option>
+          <option>R13 · Italian GP</option><option>R14 · Madrid GP</option><option>R15 · Azerbaijan GP</option>
+          <option>R16 · Singapore GP</option><option>R17 · United States GP</option><option>R18 · Mexico GP</option>
+          <option>R19 · São Paulo GP</option><option>R20 · Las Vegas GP</option><option>R21 · Qatar GP</option>
+          <option>R22 · Abu Dhabi GP</option>
         </select>
       </div>
       <div class="form-group">
@@ -413,8 +413,14 @@
           <div class="form-group">
             <label class="form-label">Race</label>
             <select class="form-select" id="admin-race">
-              <option>R20 · Mexico GP</option><option>R19 · United States GP</option><option>R18 · Singapore GP</option>
-              <option>R21 · São Paulo GP</option><option>R22 · Las Vegas GP</option><option>R23 · Qatar GP</option><option>R24 · Abu Dhabi GP</option>
+              <option>R01 · Australian GP</option><option>R02 · Chinese GP</option><option>R03 · Japanese GP</option>
+              <option>R04 · Miami GP</option><option>R05 · Canadian GP</option><option>R06 · Monaco GP</option>
+              <option>R07 · Spanish GP</option><option>R08 · Austrian GP</option><option>R09 · British GP</option>
+              <option>R10 · Belgian GP</option><option>R11 · Hungarian GP</option><option>R12 · Dutch GP</option>
+              <option>R13 · Italian GP</option><option>R14 · Madrid GP</option><option>R15 · Azerbaijan GP</option>
+              <option>R16 · Singapore GP</option><option>R17 · United States GP</option><option>R18 · Mexico GP</option>
+              <option>R19 · São Paulo GP</option><option>R20 · Las Vegas GP</option><option>R21 · Qatar GP</option>
+              <option>R22 · Abu Dhabi GP</option>
             </select>
           </div>
           <div class="form-group">
@@ -478,18 +484,28 @@ const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsI
 const DRIVERS = ['Max Verstappen','Lando Norris','Charles Leclerc','Oscar Piastri','Carlos Sainz','Lewis Hamilton','George Russell','Fernando Alonso','Lance Stroll','Nico Hülkenberg','Pierre Gasly','Esteban Ocon','Oliver Bearman','Isack Hadjar','Yuki Tsunoda','Liam Lawson','Alexander Albon','Kimi Antonelli','Jack Doohan','Gabriel Bortoleto'];
 
 const CALENDAR = [
-  {r:'R01',n:'Australian GP',d:'16 Mar',done:true},{r:'R02',n:'Chinese GP',d:'23 Mar',done:true},
-  {r:'R03',n:'Japanese GP',d:'6 Apr',done:true},{r:'R04',n:'Bahrain GP',d:'13 Apr',done:true},
-  {r:'R05',n:'Saudi Arabian GP',d:'20 Apr',done:true},{r:'R06',n:'Miami GP',d:'4 May',done:true},
-  {r:'R07',n:'Emilia Romagna GP',d:'18 May',done:true},{r:'R08',n:'Monaco GP',d:'25 May',done:true},
-  {r:'R09',n:'Canadian GP',d:'15 Jun',done:true},{r:'R10',n:'Spanish GP',d:'29 Jun',done:true},
-  {r:'R11',n:'Austrian GP',d:'6 Jul',done:true},{r:'R12',n:'British GP',d:'13 Jul',done:true},
-  {r:'R13',n:'Hungarian GP',d:'3 Aug',done:true},{r:'R14',n:'Belgian GP',d:'27 Jul',done:true},
-  {r:'R15',n:'Dutch GP',d:'31 Aug',done:true},{r:'R16',n:'Italian GP',d:'7 Sep',done:true},
-  {r:'R17',n:'Azerbaijan GP',d:'21 Sep',done:true},{r:'R18',n:'Singapore GP',d:'5 Oct',done:true},
-  {r:'R19',n:'United States GP',d:'19 Oct',done:true},{r:'R20',n:'Mexico GP',d:'26 Oct',current:true},
-  {r:'R21',n:'São Paulo GP',d:'9 Nov'},{r:'R22',n:'Las Vegas GP',d:'22 Nov'},
-  {r:'R23',n:'Qatar GP',d:'30 Nov'},{r:'R24',n:'Abu Dhabi GP',d:'7 Dec'},
+  {r:'R01',n:'Australian GP',d:'8 Mar',done:true},
+  {r:'R02',n:'Chinese GP',d:'15 Mar',done:true},
+  {r:'R03',n:'Japanese GP',d:'29 Mar',done:true},
+  {r:'R04',n:'Miami GP',d:'3 May',current:true},
+  {r:'R05',n:'Canadian GP',d:'24 May'},
+  {r:'R06',n:'Monaco GP',d:'7 Jun'},
+  {r:'R07',n:'Spanish GP',d:'14 Jun'},
+  {r:'R08',n:'Austrian GP',d:'28 Jun'},
+  {r:'R09',n:'British GP',d:'5 Jul'},
+  {r:'R10',n:'Belgian GP',d:'19 Jul'},
+  {r:'R11',n:'Hungarian GP',d:'26 Jul'},
+  {r:'R12',n:'Dutch GP',d:'23 Aug'},
+  {r:'R13',n:'Italian GP',d:'6 Sep'},
+  {r:'R14',n:'Madrid GP',d:'13 Sep'},
+  {r:'R15',n:'Azerbaijan GP',d:'26 Sep'},
+  {r:'R16',n:'Singapore GP',d:'11 Oct'},
+  {r:'R17',n:'United States GP',d:'25 Oct'},
+  {r:'R18',n:'Mexico GP',d:'1 Nov'},
+  {r:'R19',n:'São Paulo GP',d:'8 Nov'},
+  {r:'R20',n:'Las Vegas GP',d:'21 Nov'},
+  {r:'R21',n:'Qatar GP',d:'29 Nov'},
+  {r:'R22',n:'Abu Dhabi GP',d:'6 Dec'},
 ];
 
 // ===== SUPABASE =====
